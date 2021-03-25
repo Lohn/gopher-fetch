@@ -5,8 +5,8 @@ const url = process.argv[2]
 
 if (url) {
   fetch(url).then((response) => {
-    response.body.pipe(process.stdout)
+    process.stdout.write(response.body)
   })
 } else {
-  console.log('Usage:\n\tgemini-fetch gemini://gemini.circumlunar.space/')
+  console.log('Usage:\n\tgopher-fetch gopher://gopher.floodgap.com/')
 }

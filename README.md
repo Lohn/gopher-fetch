@@ -1,32 +1,29 @@
-# gemini-fetch
-Load data from the Gemini protocol the way you would fetch from HTTP in JavaScript
+# gopher-fetch
+
+Load data from the gopher protocol the way you would fetch from HTTP in JavaScript
 
 ## Usage
 
 ```
-npm i --save gemini-fetch
+npm i --save gopher-fetch
 ```
 
 ```js
-const fetch = require('gemini-fetch')({
-  // Opts from https://github.com/derhuerst/gemini#api
-  followRedirects: true,
-  useClientCerts: false
-})
+const fetch = require("gopher-fetch")();
 
-const response = await fetch('gemini://gemini.circumlunar.space/')
+const response = await fetch("gopher://gopher.floodgap.com/");
 
-console.log(await response.text())
+console.log(await response.text());
 ```
 
 ## CLI
 
 ```
-npm i -g gemini-fetch
+npm i -g gopher-fetch
 
-gemini-fetch gemini://gemini.circumlunar.space/
+gopher-fetch gopher://gopher.floodgap.com/
 
 # Or use npx
 
-npx gemini-fetch gemini://gemini.circumlunar.space/
+npx gopher-fetch gopher://gopher.floodgap.com/
 ```
